@@ -1,0 +1,16 @@
+[package]
+name = "orzmic_uploader"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+openssl = "0.10"
+base64 = "0.22.0"
+reqwest = "0.12.3"
+tokio = { version = "1", features = ["full"] }
+block-padding = "0.4.0-pre.4"
+urlencoding = "2.1.3"
