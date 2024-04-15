@@ -1,8 +1,8 @@
-use reqwest::header::{ACCEPT, ACCEPT_ENCODING, ACCEPT_LANGUAGE, CONNECTION, CONTENT_LENGTH, CONTENT_TYPE, HeaderMap, HeaderValue, HOST, USER_AGENT};
+use reqwest::header::{ACCEPT, ACCEPT_ENCODING, ACCEPT_LANGUAGE, CONTENT_TYPE, HeaderMap, HeaderValue, HOST, USER_AGENT};
 
 pub async fn send_orzmic_request(body: String) -> Result<String, Box<dyn std::error::Error>> {
     let client = reqwest::Client::builder()
-        .proxy(reqwest::Proxy::all("http://127.0.0.1:8888")?)
+        //.proxy(reqwest::Proxy::all("http://127.0.0.1:8888")?)
         .build()?;
 
     let mut headers = HeaderMap::new();
