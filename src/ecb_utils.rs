@@ -26,7 +26,7 @@ pub fn encrypt_ecb(key: &[u8], data: &[u8]) -> Result<Vec<u8>, ErrorStack> {
     let mut count = crypter.update(data, &mut encrypted)?;
 
     let rest = crypter.finalize(&mut encrypted[count..])?;
-    encrypted.truncate(count + rest); // 移除多余的部分
+    encrypted.truncate(count + rest); 
 
     Ok(encrypted)
 }
