@@ -21,7 +21,7 @@ async fn main(){
 async fn upload_data() -> io::Result<String>{
 
     println!("Reading save_file.json...");
-    let file_content = fs::read_to_string(r"C:\Users\Mako\Documents\Decompiles\Win\save_file.json").expect("Failed to read file.");
+    let file_content = fs::read_to_string(r"save_file.json").expect("Failed to read file.");
     println!("Compressing json...");
     let compressed_json:Value = serde_json::from_str(&*file_content)?;
     serde_json::to_string(&compressed_json)?;
