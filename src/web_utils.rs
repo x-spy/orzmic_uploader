@@ -16,7 +16,7 @@ pub async fn send_orzmic_request(body: String) -> Result<String, Box<dyn std::er
     headers.insert("Proxy-Connection", HeaderValue::from_static("Keep-Alive"));
 
     let response = client
-        .post("http://orzmic.big-true.top/update/")
+        .post("https://orzmic.big-true.top/update/")
         .headers(headers)
         .body(body)
         .send()
